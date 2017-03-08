@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                       xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                       soap:mustUnderstand="1">
+            <wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary"
+                                      ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"
+                                      wsu:Id="X509-AB79979F3364F5119A14761286403811">
+                <!--BinarySecurityToken-->
+            </wsse:BinarySecurityToken>
+            <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+                          Id="SIG-AB79979F3364F5119A14761286404065">
+                <ds:SignedInfo
+                        xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+                        xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+                    <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                        <ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"
+                                                PrefixList="soap">
+                        </ec:InclusiveNamespaces>
+                    </ds:CanonicalizationMethod>
+                    <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256">
+                    </ds:SignatureMethod>
+                    <ds:Reference URI="#id-AB79979F3364F5119A14761286403964">
+                        <ds:Transforms>
+                            <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#">
+                                <ec:InclusiveNamespaces xmlns:ec="http://www.w3.org/2001/10/xml-exc-c14n#"
+                                                        PrefixList="">
+                                </ec:InclusiveNamespaces>
+                            </ds:Transform>
+                        </ds:Transforms>
+                        <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256">
+                        </ds:DigestMethod>
+                        <ds:DigestValue>
+                            <!--DigestValue-->
+                        </ds:DigestValue>
+                    </ds:Reference>
+                </ds:SignedInfo>
+                <ds:SignatureValue>
+                    <!--SignatureValue-->
+                </ds:SignatureValue>
+                <ds:KeyInfo Id="KI-AB79979F3364F5119A14761286403862">
+                    <wsse:SecurityTokenReference wsu:Id="STR-AB79979F3364F5119A14761286403893">
+                        <wsse:Reference URI="#X509-AB79979F3364F5119A14761286403811"
+                                        ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3">
+                        </wsse:Reference>
+                    </wsse:SecurityTokenReference>
+                </ds:KeyInfo>
+            </ds:Signature>
+        </wsse:Security>
+    </soap:Header>
+    <soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+               wsu:Id="id-AB79979F3364F5119A14761286403964">
+        <Trzba xmlns="http://fs.mfcr.cz/eet/schema/v3">
+            <Hlavicka dat_odesl="→dat_odesl←"
+                      prvni_zaslani="→prvni_zaslani←"
+                      uuid_zpravy="→uuid_zpravy←">
+            </Hlavicka>
+            <Data celk_trzba="→celk_trzba←"
+                  cerp_zuct="→cerp_zuct←"
+                  cest_sluz="→cest_sluz←"
+                  dan1="→dan1←"
+                  dan2="→dan2←"
+                  dan3="→dan3←"
+                  dat_trzby="→dat_trzby←"
+                  dic_popl="→dic_popl←"
+                  id_pokl="→id_pokl←"
+                  id_provoz="→id_provoz←"
+                  porad_cis="→porad_cis←"
+                  pouzit_zboz1="→pouzit_zboz1←"
+                  pouzit_zboz2="→pouzit_zboz2←"
+                  pouzit_zboz3="→pouzit_zboz3←"
+                  rezim="→rezim←"
+                  urceno_cerp_zuct="→urceno_cerp_zuct←"
+                  zakl_dan1="→zakl_dan1←"
+                  zakl_dan2="→zakl_dan2←"
+                  zakl_dan3="→zakl_dan3←"
+                  zakl_nepodl_dph="→zakl_nepodl_dph←">
+            </Data>
+            <KontrolniKody>
+                <pkp cipher="RSA2048"
+                     digest="SHA256"
+                     encoding="base64">
+                    <!--pkp-->
+                </pkp>
+                <bkp digest="SHA1"
+                     encoding="base16">
+                    <!--bkp-->
+                </bkp>
+            </KontrolniKody>
+        </Trzba>
+    </soap:Body>
+</soap:Envelope>
