@@ -19,8 +19,7 @@ import tomas_vycital.eet.lib.exception.EETMissingValuesException;
  */
 @SuppressWarnings({"WeakerAccess", "SameParameterValue"})
 public class EETReceipt {
-
-    final static String[] attrNames = new String[]{"dic_popl", "id_provoz", "id_pokl", "porad_cis", "dat_trzby", "celk_trzba", "dat_odesl", "uuid_zpravy", "prvni_zaslani", "dic_poverujiciho", "zakl_nepodl_dph", "zakl_dan1", "dan1", "zakl_dan2", "dan2", "zakl_dan3", "dan3", "cest_sluz", "pouzit_zboz1", "pouzit_zboz2", "pouzit_zboz3", "urceno_cerp_zuct", "cerp_zuct", "rezim"};
+    final static String[] attrNames = new String[]{"dic_popl", "id_provoz", "id_pokl", "porad_cis", "dat_trzby", "celk_trzba", "dat_odesl", "uuid_zpravy", "prvni_zaslani", "dic_poverujiciho", "overeni", "zakl_nepodl_dph", "zakl_dan1", "dan1", "zakl_dan2", "dan2", "zakl_dan3", "dan3", "cest_sluz", "pouzit_zboz1", "pouzit_zboz2", "pouzit_zboz3", "urceno_cerp_zuct", "cerp_zuct", "rezim"};
     private final static String[] mandatoryAttrNames = new String[]{"dic_popl", "id_provoz", "id_pokl", "porad_cis", "dat_trzby", "celk_trzba", "dat_odesl", "uuid_zpravy", "prvni_zaslani", "rezim"};
     private final HashMap<String, String> attrValues;
     Keychain keyChain;
@@ -140,6 +139,11 @@ public class EETReceipt {
 
     public EETReceipt setDicPoverujiciho(String value) {
         this.attrValues.put("dic_poverujiciho", value);
+        return this;
+    }
+
+    public EETReceipt setOvereni(boolean value) {
+        this.attrValues.put("overeni", value ? "true" : "false");
         return this;
     }
 

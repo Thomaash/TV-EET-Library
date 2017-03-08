@@ -85,6 +85,7 @@ class Request {
             "                  dic_popl=\"→dic_popl←\"\n" +
             "                  id_pokl=\"→id_pokl←\"\n" +
             "                  id_provoz=\"→id_provoz←\"\n" +
+            "                  overeni=\"→overeni←\"\n" +
             "                  porad_cis=\"→porad_cis←\"\n" +
             "                  pouzit_zboz1=\"→pouzit_zboz1←\"\n" +
             "                  pouzit_zboz2=\"→pouzit_zboz2←\"\n" +
