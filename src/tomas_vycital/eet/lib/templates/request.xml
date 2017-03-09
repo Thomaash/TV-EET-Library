@@ -54,6 +54,7 @@
                wsu:Id="id-AB79979F3364F5119A14761286403964">
         <Trzba xmlns="http://fs.mfcr.cz/eet/schema/v3">
             <Hlavicka dat_odesl="→dat_odesl←"
+                      overeni="→overeni←"
                       prvni_zaslani="→prvni_zaslani←"
                       uuid_zpravy="→uuid_zpravy←">
             </Hlavicka>
@@ -67,7 +68,6 @@
                   dic_popl="→dic_popl←"
                   id_pokl="→id_pokl←"
                   id_provoz="→id_provoz←"
-                  overeni="→overeni←"
                   porad_cis="→porad_cis←"
                   pouzit_zboz1="→pouzit_zboz1←"
                   pouzit_zboz2="→pouzit_zboz2←"

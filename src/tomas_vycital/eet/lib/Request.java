@@ -72,6 +72,7 @@ class Request {
             "               wsu:Id=\"id-AB79979F3364F5119A14761286403964\">\n" +
             "        <Trzba xmlns=\"http://fs.mfcr.cz/eet/schema/v3\">\n" +
             "            <Hlavicka dat_odesl=\"→dat_odesl←\"\n" +
+            "                      overeni=\"→overeni←\"\n" +
             "                      prvni_zaslani=\"→prvni_zaslani←\"\n" +
             "                      uuid_zpravy=\"→uuid_zpravy←\">\n" +
             "            </Hlavicka>\n" +
@@ -85,7 +86,6 @@ class Request {
             "                  dic_popl=\"→dic_popl←\"\n" +
             "                  id_pokl=\"→id_pokl←\"\n" +
             "                  id_provoz=\"→id_provoz←\"\n" +
-            "                  overeni=\"→overeni←\"\n" +
             "                  porad_cis=\"→porad_cis←\"\n" +
             "                  pouzit_zboz1=\"→pouzit_zboz1←\"\n" +
             "                  pouzit_zboz2=\"→pouzit_zboz2←\"\n" +
