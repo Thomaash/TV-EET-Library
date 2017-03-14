@@ -5,7 +5,7 @@ package tomas_vycital.eet.lib.exception;
  */
 
 public class EETMissingValuesException extends EETException {
-    public EETMissingValuesException(String value) {
-        super("Missing value in the receipt_items: " + value);
+    public EETMissingValuesException( String value ) {
+        super( "Missing value in the receipt_items: " + value );
     }
 }

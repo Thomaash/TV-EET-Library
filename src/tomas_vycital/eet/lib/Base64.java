@@ -7,7 +7,7 @@ package tomas_vycital.eet.lib;
  */
 
 class Base64 {
-    static String encode(byte[] data) {
+    static String encode( byte[] data ) {
         // return android.util.Base64.encodeToString(data, android.util.Base64.DEFAULT);
         return java.util.Base64.getEncoder().encodeToString( data );
     }

@@ -8,12 +8,12 @@ public class EETServerException extends EETException {
     private final Integer code;
 
     public EETServerException() {
-        super("Something went wrong.");
+        super( "Something went wrong." );
         this.code = null;
     }
 
-    public EETServerException(int code, String text) {
-        super(text);
+    public EETServerException( int code, String text ) {
+        super( text );
         this.code = code;
     }
 
