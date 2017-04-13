@@ -58,7 +58,7 @@ class Request {
         signature.update( plaintext.getBytes( "UTF-8" ) );
 
         byte[] rawPKP = signature.sign();
-        String pkp = Base64.encode( rawPKP );
+        String pkp = Compat.base64Enc( rawPKP );
 
         MessageDigest crypt = MessageDigest.getInstance( "SHA-1" );
         crypt.reset();
@@ -82,7 +82,7 @@ class Request {
     }
 
     private void addCertificate() throws CertificateEncodingException {
-        this.replaceTagPlaceholder( "BinarySecurityToken", Base64.encode( this.receipt.keyChain.getCertificate().getEncoded() ) );
+        this.replaceTagPlaceholder( "BinarySecurityToken", Compat.base64Enc( this.receipt.keyChain.getCertificate().getEncoded() ) );
     }
 
     private void sign() throws NoSuchAlgorithmException, UnsupportedEncodingException, InvalidKeyException, SignatureException {
@@ -93,7 +93,7 @@ class Request {
         // Add digest
         MessageDigest md = MessageDigest.getInstance( "SHA-256" );
         md.update( body.getBytes( "UTF-8" ) );
-        this.replaceTagPlaceholder( "DigestValue", Base64.encode( md.digest() ) );
+        this.replaceTagPlaceholder( "DigestValue", Compat.base64Enc( md.digest() ) );
 
         // Prepare signed info
         String signedInfo = this.document.replaceFirst( "[\\d\\D]*(<ds:SignedInfo[\\d\\D]*</ds:SignedInfo>)[\\d\\D]*", "$1" );
@@ -104,7 +104,7 @@ class Request {
         signature.initSign( this.receipt.keyChain.getPrivateKey() );
         signature.update( signedInfo.getBytes( "UTF-8" ) );
 
-        this.replaceTagPlaceholder( "SignatureValue", Base64.encode( signature.sign() ) );
+        this.replaceTagPlaceholder( "SignatureValue", Compat.base64Enc( signature.sign() ) );
     }
 
     private String uglifyXML( String xml ) {
