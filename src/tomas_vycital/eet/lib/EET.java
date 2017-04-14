@@ -2,6 +2,7 @@ package tomas_vycital.eet.lib;
 
 import tomas_vycital.eet.lib.exception.EETException;
 
+import javax.net.ssl.HttpsURLConnection;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
@@ -54,7 +55,7 @@ public class EET {
         byte[] soapMessage = receipt.request.getBytes( "UTF-8" );
 
         // Prepare a connection
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
         connection.setUseCaches( false );
         connection.setDoOutput( true );
         connection.setDoInput( true );
