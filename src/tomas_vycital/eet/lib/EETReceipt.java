@@ -83,7 +83,7 @@ public class EETReceipt {
         return sdf.format( date );
     }
 
-    private String halersToString( int halers ) {
+    private String halersToString( long halers ) {
         return String.format( halers < 0 ? "%04d" : "%03d", halers ).replaceFirst( "^(.*)(.{2})$", "$1.$2" );
     }
 
@@ -117,7 +117,7 @@ public class EETReceipt {
         return this;
     }
 
-    public EETReceipt setCelkTrzba( int value ) {
+    public EETReceipt setCelkTrzba( long value ) {
         this.attrValues.put( "celk_trzba", this.halersToString( value ) );
         return this;
     }
@@ -147,67 +147,67 @@ public class EETReceipt {
         return this;
     }
 
-    public EETReceipt setZaklNepodlDph( int value ) {
+    public EETReceipt setZaklNepodlDph( long value ) {
         this.attrValues.put( "zakl_nepodl_dph", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setZaklDan1( int value ) {
+    public EETReceipt setZaklDan1( long value ) {
         this.attrValues.put( "zakl_dan1", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setDan1( int value ) {
+    public EETReceipt setDan1( long value ) {
         this.attrValues.put( "dan1", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setZaklDan2( int value ) {
+    public EETReceipt setZaklDan2( long value ) {
         this.attrValues.put( "zakl_dan2", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setDan2( int value ) {
+    public EETReceipt setDan2( long value ) {
         this.attrValues.put( "dan2", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setZaklDan3( int value ) {
+    public EETReceipt setZaklDan3( long value ) {
         this.attrValues.put( "zakl_dan3", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setDan3( int value ) {
+    public EETReceipt setDan3( long value ) {
         this.attrValues.put( "dan3", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setCestSluz( int value ) {
+    public EETReceipt setCestSluz( long value ) {
         this.attrValues.put( "cest_sluz", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setPouzitZboz1( int value ) {
+    public EETReceipt setPouzitZboz1( long value ) {
         this.attrValues.put( "pouzit_zboz1", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setPouzitZboz2( int value ) {
+    public EETReceipt setPouzitZboz2( long value ) {
         this.attrValues.put( "pouzit_zboz2", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setPouzitZboz3( int value ) {
+    public EETReceipt setPouzitZboz3( long value ) {
         this.attrValues.put( "pouzit_zboz3", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setUrcenoCerpZuct( int value ) {
+    public EETReceipt setUrcenoCerpZuct( long value ) {
         this.attrValues.put( "urceno_cerp_zuct", this.halersToString( value ) );
         return this;
     }
 
-    public EETReceipt setCerpZuct( int value ) {
+    public EETReceipt setCerpZuct( long value ) {
         this.attrValues.put( "cerp_zuct", this.halersToString( value ) );
         return this;
     }
